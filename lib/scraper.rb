@@ -15,8 +15,10 @@ class Scraper
       location = student.css(".student-location").text
       profile_url = student.css("a").attr("href").text
       hash = {:name => name, :location => location, :profile_url => profile_url}
-    }
+    end
     scraped_students << hash
+  end
+
   end
 
   def self.scrape_profile_page(profile_url)
